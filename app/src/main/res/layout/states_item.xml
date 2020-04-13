@@ -1,0 +1,56 @@
+<LinearLayout android:layout_margin="20dp"
+    android:id="@+id/diagnoses_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textStyle="bold"
+                android:paddingRight="10dp"
+                android:id="@+id/admited"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="of"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:id="@+id/total_confirmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="230"/>
+
+            <TextView
+                android:id="@+id/state_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lagos"
+                android:gravity="end"/>
+
+        </LinearLayout>
+
+
+        <ProgressBar
+    style="?android:attr/progressBarStyleHorizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/progress"
+    android:max="100"
+    android:progress="45"/>
+
+
+    </LinearLayout>
+

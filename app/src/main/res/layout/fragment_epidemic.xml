@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.epidemic.EpidemicFragment">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/epidemic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Covid-19 epidemic"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cases-card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/epidemic"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="18dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="10dp"
+        card_view:contentPadding="18dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardMaxElevation="7dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/cases_ng"
+                android:layout_width="120dp"
+                android:background="@drawable/rectangle_shape"
+                android:layout_height="70dp">
+
+                <ImageView
+                    android:layout_gravity="start"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:tint="@android:color/white"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_total_black_24dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="NG"
+                    android:textSize="42sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="46 Cases"
+                android:gravity="end"
+                android:textSize="42sp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/metrics-card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="0dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="10dp"
+        card_view:contentPadding="0dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardMaxElevation="7dp">
+
+        <RelativeLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="350dp">
+
+
+
+            <LinearLayout
+                android:id="@+id/epidemic_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:paddingTop="18dp"
+                    android:text="Corona Epidemic"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+
+
+                <WebView
+                    android:layout_margin="10dp"
+                    android:id="@+id/mybrowser"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginBottom="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:text="1,200 k"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:text="Patients Worldwide"
+                android:textSize="12sp"
+                android:textStyle="normal"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+
+
+</RelativeLayout>

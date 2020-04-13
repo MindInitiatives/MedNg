@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    xmlns:card_view="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_checklist">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/metrics-card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="0dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="10dp"
+        card_view:contentPadding="0dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardMaxElevation="7dp">
+
+        <RelativeLayout
+            android:id="@+id/epidemic_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/checklist"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Checklist"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/top_divider"
+            android:layout_below="@id/checklist"
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rectangle_shape_lighter"
+            android:layout_height="40dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_below="@+id/top_divider">
+
+            <com.rey.material.widget.CheckBox
+                android:id="@+id/q1"
+                style="@style/Material.Drawable.CheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Do you have cough ?"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:cbd_strokeColor="@color/colorAccent"
+                app:cbd_tickColor="@color/colorAccent"/>
+
+                <ImageView
+                    android:id="@+id/ic1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_caugh_problem"
+                    android:layout_alignEnd="@id/q1"/>
+
+                <View
+                    android:id="@+id/d1"
+                    android:layout_below="@+id/q1"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/divider" />
+
+                <com.rey.material.widget.CheckBox
+                    android:id="@+id/q2"
+                    android:layout_below="@+id/d1"
+                    style="@style/Material.Drawable.CheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Do you have cold ?"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    app:cbd_strokeColor="@color/colorAccent"
+                    app:cbd_tickColor="@color/colorAccent"/>
+
+                <ImageView
+                    android:layout_below="@+id/d1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_caugh_problem"
+                    android:layout_alignEnd="@id/q2"/>
+
+                <View
+                    android:id="@+id/d2"
+                    android:layout_below="@+id/q2"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/divider" />
+
+                <com.rey.material.widget.CheckBox
+                    android:id="@+id/q3"
+                    android:layout_below="@+id/d2"
+                    style="@style/Material.Drawable.CheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Are you having Diarrhea ?"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    app:cbd_strokeColor="@color/colorAccent"
+                    app:cbd_tickColor="@color/colorAccent"/>
+
+                <ImageView
+                    android:layout_below="@+id/d2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_caugh_problem"
+                    android:layout_alignEnd="@id/q3"/>
+
+                <View
+                    android:id="@+id/d3"
+                    android:layout_below="@+id/q3"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/divider" />
+
+                <com.rey.material.widget.CheckBox
+                    android:id="@+id/q4"
+                    android:layout_below="@+id/d3"
+                    style="@style/Material.Drawable.CheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Do you have sore throat ?"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    app:cbd_strokeColor="@color/colorAccent"
+                    app:cbd_tickColor="@color/colorAccent"/>
+
+                <ImageView
+                    android:layout_below="@+id/d3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_caugh_problem"
+                    android:layout_alignEnd="@id/q4"/>
+
+
+                <View
+                    android:id="@+id/d4"
+                    android:layout_below="@+id/q4"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/divider" />
+
+                <com.rey.material.widget.CheckBox
+                    android:id="@+id/q5"
+                    android:layout_below="@+id/d4"
+                    style="@style/Material.Drawable.CheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="6dp"
+                    android:gravity="center_vertical"
+                    android:text="Are you experiencing MYALGIA or Body aches ?"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    app:cbd_strokeColor="@color/colorAccent"
+                    app:cbd_tickColor="@color/colorAccent"/>
+
+                <ImageView
+                    android:layout_below="@+id/d4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_caugh_problem"
+                    android:layout_alignEnd="@id/q5"/>
+
+
+                <View
+                    android:id="@+id/d5"
+                    android:layout_below="@+id/q5"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/divider" />
+
+                <com.rey.material.widget.CheckBox
+                    android:id="@+id/q6"
+                    android:layout_below="@+id/d5"
+                    style="@style/Material.Drawable.CheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Do you have a Headache ?"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    app:cbd_strokeColor="@color/colorAccent"
+                    app:cbd_tickColor="@color/colorAccent"/>
+
+                <ImageView
+                    android:layout_below="@+id/d5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_caugh_problem"
+                    android:layout_alignEnd="@id/q6"/>
+
+
+                <View
+                    android:id="@+id/d6"
+                    android:layout_below="@+id/q6"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/divider" />
+
+                <com.rey.material.widget.CheckBox
+                    android:id="@+id/q7"
+                    android:layout_below="@+id/d6"
+                    style="@style/Material.Drawable.CheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Do you have fever ?"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    app:cbd_strokeColor="@color/colorAccent"
+                    app:cbd_tickColor="@color/colorAccent"/>
+
+                <ImageView
+                    android:layout_below="@+id/d6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_high_fever"
+                    android:layout_alignEnd="@id/q7"/>
+
+
+                <View
+                    android:id="@+id/d7"
+                    android:layout_below="@+id/q7"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/divider" />
+
+                <com.rey.material.widget.CheckBox
+                    android:id="@+id/q8"
+                    android:layout_below="@+id/d7"
+                    style="@style/Material.Drawable.CheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="6dp"
+                    android:gravity="center_vertical"
+                    android:text="Are you having difficulty breathing ?"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    app:cbd_strokeColor="@color/colorAccent"
+                    app:cbd_tickColor="@color/colorAccent"/>
+
+                <ImageView
+                    android:layout_below="@+id/d7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_breathing_problem"
+                    android:layout_alignEnd="@id/q8"/>
+
+
+                <View
+                    android:id="@+id/d8"
+                    android:layout_below="@+id/q8"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/divider" />
+
+                <com.rey.material.widget.CheckBox
+                    android:id="@+id/q9"
+                    android:layout_below="@+id/d8"
+                    style="@style/Material.Drawable.CheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Are you experiencing fatigue ?"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    app:cbd_strokeColor="@color/colorAccent"
+                    app:cbd_tickColor="@color/colorAccent"/>
+
+                <ImageView
+                    android:layout_below="@+id/d8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_caugh_problem"
+                    android:layout_alignEnd="@id/q9"/>
+
+
+                <View
+                    android:id="@+id/d9"
+                    android:layout_below="@+id/q9"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/divider" />
+
+                <com.rey.material.widget.CheckBox
+                    android:id="@+id/q10"
+                    android:layout_below="@+id/d9"
+                    style="@style/Material.Drawable.CheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="6dp"
+                    android:gravity="center_vertical"
+                    android:text="Are you having difficulty breathing ?"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    app:cbd_strokeColor="@color/colorAccent"
+                    app:cbd_tickColor="@color/colorAccent"/>
+
+                <ImageView
+                    android:layout_below="@+id/d9"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_caugh_problem"
+                    android:layout_alignEnd="@id/q10"/>
+
+
+                <View
+                    android:id="@+id/d10"
+                    android:layout_below="@+id/q10"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/divider" />
+
+                <com.rey.material.widget.CheckBox
+                    android:id="@+id/q11"
+                    android:layout_below="@+id/d10"
+                    style="@style/Material.Drawable.CheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="6dp"
+                    android:gravity="center_vertical"
+                    android:text="Have you travelled recently during the past 14 days ?"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    app:cbd_strokeColor="@color/colorAccent"
+                    app:cbd_tickColor="@color/colorAccent"/>
+
+                <ImageView
+                    android:layout_below="@+id/d10"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_travel_avoid"
+                    android:layout_alignEnd="@id/q11"/>
+
+
+                <View
+                    android:id="@+id/d11"
+                    android:layout_below="@+id/q11"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/divider" />
+
+                <com.rey.material.widget.CheckBox
+                    android:id="@+id/q12"
+                    android:layout_below="@+id/d11"
+                    style="@style/Material.Drawable.CheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="6dp"
+                    android:gravity="center_vertical"
+                    android:text="Do you have a travel history to a COVID-19 INFECTED AREA ?"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    app:cbd_strokeColor="@color/colorAccent"
+                    app:cbd_tickColor="@color/colorAccent"/>
+
+                <ImageView
+                    android:layout_below="@+id/d11"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_travel_avoid"
+                    android:layout_alignEnd="@id/q12"/>
+
+
+                <View
+                    android:id="@+id/d12"
+                    android:layout_below="@+id/q12"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/divider" />
+
+
+                <com.rey.material.widget.CheckBox
+                    android:id="@+id/q13"
+                    android:layout_below="@+id/d12"
+                    style="@style/Material.Drawable.CheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="6dp"
+                    android:gravity="center_vertical"
+                    android:text="Do you have a direct contact or is taking care of a positive COVID-19 PATIENT ?"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    app:cbd_strokeColor="@color/colorAccent"
+                    app:cbd_tickColor="@color/colorAccent"/>
+
+                <ImageView
+                    android:layout_below="@+id/d12"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_caugh_problem"
+                    android:layout_alignEnd="@id/q13"/>
+
+
+                <View
+                    android:id="@+id/d13"
+                    android:layout_below="@+id/q13"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/divider" />
+
+                <info.hoang8f.widget.FButton
+                    android:id="@+id/btnSubmit"
+                    android:layout_below="@+id/d13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Submit"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:weightSum="1"
+                    app:cornerRadius="6dp"
+                    app:fButtonColor="@color/colorPrimary"
+                    app:shadowColor="@color/colorAccent"
+                    app:shadowEnabled="true"
+                    app:shadowHeight="3dp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

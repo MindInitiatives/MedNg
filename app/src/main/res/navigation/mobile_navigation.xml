@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_epidemic">
+
+    <fragment
+        android:id="@+id/navigation_epidemic"
+        android:name="com.mindinitiatives.med_ng.ui.epidemic.EpidemicFragment"
+        android:label="@string/menu_epidemic"
+        tools:layout="@layout/fragment_epidemic">
+
+        <action
+            android:id="@+id/action_navigation_epidemic_self"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_conditons"
+        android:name="com.mindinitiatives.med_ng.ui.condition.ConditionFragment"
+        android:label="@string/menu_conditions"
+        tools:layout="@layout/fragment_condition" />
+
+    <fragment
+        android:id="@+id/navigation_diagnoses"
+        android:name="com.mindinitiatives.med_ng.ui.diagnoses.DiagnosesFragment"
+        android:label="@string/menu_diagnoses"
+        tools:layout="@layout/fragment_diagnoses" />
+
+    <fragment
+        android:id="@+id/navigation_recovery"
+        android:name="com.mindinitiatives.med_ng.ui.recovery.RecoveryFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_recovery" />
+</navigation>

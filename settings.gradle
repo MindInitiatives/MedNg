@@ -1,0 +1,3 @@
+rootProject.name='Med_ng'
+include ':app'
+//, ':library'
